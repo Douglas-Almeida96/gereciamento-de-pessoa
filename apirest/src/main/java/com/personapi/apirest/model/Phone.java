@@ -23,7 +23,7 @@ public class Phone {
     private TypePhone typePhone;
 
     @Column(nullable = true)
-    private String nome;
+    private String number;
 
 
 }
