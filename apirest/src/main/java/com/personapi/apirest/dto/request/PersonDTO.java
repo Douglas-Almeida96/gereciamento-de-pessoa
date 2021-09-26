@@ -7,9 +7,6 @@ import org.hibernate.validator.constraints.br.CPF;
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 
@@ -18,6 +15,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PersonDTO {
+
+    private Long id;
 
     @NotEmpty
     @Size(min = 3, max = 100)
