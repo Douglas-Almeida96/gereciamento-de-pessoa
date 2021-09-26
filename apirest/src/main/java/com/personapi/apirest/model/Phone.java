@@ -1,15 +1,12 @@
 package com.personapi.apirest.model;
 
 import com.personapi.apirest.enums.TypePhone;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+@Builder
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity

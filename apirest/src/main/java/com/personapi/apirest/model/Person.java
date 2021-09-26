@@ -1,16 +1,16 @@
 package com.personapi.apirest.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
-@Getter
-@Setter
+
+@Builder
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -29,8 +29,7 @@ public class Person {
     @Column(nullable = true, unique = true)
     private String cpf;
 
-
-    private LocalDateTime birthday;
+    private Date birthDate;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<Phone> phones;
